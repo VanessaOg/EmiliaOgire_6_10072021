@@ -1,0 +1,51 @@
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "azerty"
+}
+
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "elisa@gmail.com",
+    "password": "123456"
+}
+###
+GET http://localhost:3000/api/sauces
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZmOWE2NWUwNjcyZjNkOTRlOTFmYmIiLCJpYXQiOjE2Mjc3MDcyNzQsImV4cCI6MTYyNzc5MzY3NH0.o1m_zTVh9bNVjD-0s-yAKnf62jmTg2D-p_y-mv7BKqc
+
+
+###
+PUT http://localhost:3000/api/sauces/61028d9480706a3fac9e5604
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZmOWE2NWUwNjcyZjNkOTRlOTFmYmIiLCJpYXQiOjE2Mjc3MDcyNzQsImV4cCI6MTYyNzc5MzY3NH0.o1m_zTVh9bNVjD-0s-yAKnf62jmTg2D-p_y-mv7BKqc
+Content-Type: application/json
+
+{
+    "name": "sauce piratée"
+}
+
+###
+
+POST http://localhost:3000/api/sauces/61028d9480706a3fac9e5604/like
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZmOWE2NWUwNjcyZjNkOTRlOTFmYmIiLCJpYXQiOjE2Mjc3MDcyNzQsImV4cCI6MTYyNzc5MzY3NH0.o1m_zTVh9bNVjD-0s-yAKnf62jmTg2D-p_y-mv7BKqc
+Content-Type: application/json
+
+{
+"like":1,
+ "userId": "60ff9a65e0672f3d94e91fbb"
+}
+
+###
+
+POST http://localhost:3000/api/sauces/61028d9480706a3fac9e5604/like
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZmOWE2NWUwNjcyZjNkOTRlOTFmYmIiLCJpYXQiOjE2Mjc3MDcyNzQsImV4cCI6MTYyNzc5MzY3NH0.o1m_zTVh9bNVjD-0s-yAKnf62jmTg2D-p_y-mv7BKqc
+Content-Type: application/json
+
+{
+"like":1,
+ "userId": "60ff9a65e0672f3d94e91fbb"
+}
