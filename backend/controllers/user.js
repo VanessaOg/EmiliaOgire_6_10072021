@@ -19,7 +19,6 @@ exports.signup = (req, res, next) => {
 				.catch((error) => res.status(400).json({ error }));
 		})
 		.catch((error) => res.status(500).json({ error }));
-	next();
 };
 
 exports.login = (req, res, next) => {
