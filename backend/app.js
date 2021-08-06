@@ -8,22 +8,37 @@ const path = require("path");
 
 // helmet pour les vulvérabilités Helmet helps you secure your Express apps by setting various HTTP headers.
 const helmet = require("helmet");
+// Pour limiter les demandes répétées aux API
+const rateLimit = require("express-rate-limit");
+
+const limiter = rateLimit({
+	windowMs: 15 * 60 * 1000, // 15 minutes
+	max: 100, // limit each IP to 100 requests per windowMs
+});
 
 //declaration des routes
 const saucesRoutes = require("./routes/sauces");
 const userRoutes = require("./routes/user");
+const bodyParser = require("body-parser");
 
 // dotenv pour masquer les informations de la BDD (variable environnement)
 require("dotenv").config();
 
 // Conneexion à la BDD et fonction à executer
 mongoose
-	.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+	.connect(process.env.DB_URI, {
+		useCreateIndex: true,
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	})
 	.then(() => console.log("Connexion à MongoDB réussie !"))
 	.catch(() => console.log("Connexion à MongoDB échouée !"));
 
 // initialisation
 const app = express();
+
+//  apply to all requests
+app.use(limiter);
 
 // ***************Cross Origin Resource Sharing*******************//
 app.use((req, res, next) => {
@@ -37,7 +52,7 @@ app.use((req, res, next) => {
 });
 
 // Body Parser Middleware
-app.use(express.json());
+app.use(express());
 
 // Permet de sécuriser contre les données non fiables entre sites
 app.use(helmet());

@@ -1,6 +1,13 @@
 module.exports = (req, res, next) => {
-	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(req.body.email)) {
-		if (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(req.body.password)) {
+	const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	const PASSWORD_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+	if (req.body.email == null || req.body.password == null) {
+		return res.status(400).json({ error: "Les champs doivent être remplis" });
+	}
+
+	if (EMAIL_REGEX.test(req.body.email)) {
+		if (PASSWORD_REGEX.test(req.body.password)) {
 			next();
 		} else {
 			res.status(400).json({
