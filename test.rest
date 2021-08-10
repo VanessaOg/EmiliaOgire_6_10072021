@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "email": "test@gmail.com",
-    "password": "azerty"
+    "password": "Azerty261"
 }
 
 ###
@@ -12,40 +12,40 @@ Content-Type: application/json
 
 {
     "email": "elisa@gmail.com",
-    "password": "123456"
+    "password": "Licorne26"
 }
+
 ###
 GET http://localhost:3000/api/sauces
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZmOWE2NWUwNjcyZjNkOTRlOTFmYmIiLCJpYXQiOjE2Mjc3MDcyNzQsImV4cCI6MTYyNzc5MzY3NH0.o1m_zTVh9bNVjD-0s-yAKnf62jmTg2D-p_y-mv7BKqc
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTEyYTQ1YjhiYzdjZDU2MmNhNWFlZGUiLCJpYXQiOjE2Mjg2MjQ3MjIsImV4cCI6MTYyODcxMTEyMn0.ZHHZ0alknZ8ksE9GHyxsSFWTApl2wiFZ2qZMsH4MjEA
 
 ###
-PUT http://localhost:3000/api/sauces/61028d9480706a3fac9e5604
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZmOWE2NWUwNjcyZjNkOTRlOTFmYmIiLCJpYXQiOjE2Mjc3MDcyNzQsImV4cCI6MTYyNzc5MzY3NH0.o1m_zTVh9bNVjD-0s-yAKnf62jmTg2D-p_y-mv7BKqc
+PUT http://localhost:3000/api/sauces/6112a4b68bc7cd562ca5aee4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTEyYTQ1YjhiYzdjZDU2MmNhNWFlZGUiLCJpYXQiOjE2Mjg2MjQ3MjIsImV4cCI6MTYyODcxMTEyMn0.ZHHZ0alknZ8ksE9GHyxsSFWTApl2wiFZ2qZMsH4MjEA
 Content-Type: application/json
 
 {
-    "name": "sauce piratée"
+    "name": "Sauce aux oignons"
 }
 
 ###
 
-POST http://localhost:3000/api/sauces/61028d9480706a3fac9e5604/like
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZmOWE2NWUwNjcyZjNkOTRlOTFmYmIiLCJpYXQiOjE2Mjc3MDcyNzQsImV4cCI6MTYyNzc5MzY3NH0.o1m_zTVh9bNVjD-0s-yAKnf62jmTg2D-p_y-mv7BKqc
+POST http://localhost:3000/api/sauces/6112a4b68bc7cd562ca5aee4/like
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTEyYTQ1YjhiYzdjZDU2MmNhNWFlZGUiLCJpYXQiOjE2Mjg2MjQ3MjIsImV4cCI6MTYyODcxMTEyMn0.ZHHZ0alknZ8ksE9GHyxsSFWTApl2wiFZ2qZMsH4MjEA
 Content-Type: application/json
 
 {
 "like":1,
- "userId": "60ff9a65e0672f3d94e91fbb"
+ "userId": "6112a45b8bc7cd562ca5aede"
 }
 
 ###
 
-POST http://localhost:3000/api/sauces/61028d9480706a3fac9e5604/like
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGZmOWE2NWUwNjcyZjNkOTRlOTFmYmIiLCJpYXQiOjE2Mjc3MDcyNzQsImV4cCI6MTYyNzc5MzY3NH0.o1m_zTVh9bNVjD-0s-yAKnf62jmTg2D-p_y-mv7BKqc
+POST http://localhost:3000/api/sauces/6112a4b68bc7cd562ca5aee4/like
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTEyYTQ1YjhiYzdjZDU2MmNhNWFlZGUiLCJpYXQiOjE2Mjg2MjQ3MjIsImV4cCI6MTYyODcxMTEyMn0.ZHHZ0alknZ8ksE9GHyxsSFWTApl2wiFZ2qZMsH4MjEA
 Content-Type: application/json
 
 {
 "like":1,
- "userId": "60ff9a65e0672f3d94e91fbb"
+ "userId": "6112a45b8bc7cd562ca5aede"
 }

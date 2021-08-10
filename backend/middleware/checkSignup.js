@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
 	if (req.body.email == null || req.body.password == null) {
 		return res.status(400).json({ error: "Les champs doivent être remplis" });
 	}
-
+	// console.log(req.body);
 	if (EMAIL_REGEX.test(req.body.email)) {
 		if (PASSWORD_REGEX.test(req.body.password)) {
 			next();

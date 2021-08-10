@@ -12,8 +12,8 @@ const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 
 const limiter = rateLimit({
-	windowMs: 15 * 60 * 1000, // 15 minutes
-	max: 100, // limit each IP to 100 requests per windowMs
+	windowMs: 3 * 60 * 1000,
+	max: 3, // limit each IP to 3 requests per windowMs
 });
 
 //declaration des routes
@@ -38,7 +38,7 @@ mongoose
 const app = express();
 
 //  apply to all requests
-app.use(limiter);
+app.use("/api/auth/login", limiter);
 
 // ***************Cross Origin Resource Sharing*******************//
 app.use((req, res, next) => {
@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 });
 
 // Body Parser Middleware
-app.use(express());
+app.use(express.json());
 
 // Permet de sécuriser contre les données non fiables entre sites
 app.use(helmet());
