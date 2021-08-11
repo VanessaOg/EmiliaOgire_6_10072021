@@ -1,9 +1,15 @@
-#So Pekocko - Projet 6- Construction d'une API sécurisée pour une application d'avis gastronomiques
+# Formation Développeur Web - OpenClassrooms
+
+## So Pekocko - Projet 6- Construction d'une API sécurisée pour une application d'avis gastronomiques
+
+L'objectif de ce projet est de créer
 
 ### Contexte
 
-La marque So Pekocko, qui crée des sauces piquantes, connaît un franc succès, en partie grâce à sa chaîne de vidéos YouTube “La piquante”.
+La marque **So Pekocko**, qui crée des sauces piquantes, connaît un franc succès, en partie grâce à sa chaîne de vidéos YouTube “La piquante”.
+
 L’entreprise souhaite désormais développer une application d’évaluation de ses sauces piquantes,appelée “Piquante”.
+
 La product-owner de So Pekocko, a décidé que le MVP du projet sera une application web permettant aux utilisateurs d’ajouter leurs sauces préférées et de liker ou disliker les sauces ajoutées par les autres utilisateurs.
 
 ### Compétences évaluées
